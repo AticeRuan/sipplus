@@ -1,0 +1,863 @@
+/* 
+green: #243e36
+cream: #f4f3ee
+pink: #E0afa0
+grey: #8a817c
+dark: #32213A 
+creamy blue: #B8DBD9*/
+@import url(https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Ubuntu:wght@700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display);
+@import url(https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap);
+/* ==============  Globel style  ===========*/
+body {
+  background-color: #f4f3ee;
+  margin: auto;
+}
+.content_wrapper {
+  width: 80vw;
+  margin: 0 auto;
+}
+aside {
+  width: 165px;
+  height: 30px;
+  margin: 0;
+  margin-right: -140px;
+  padding-top: 1vh;
+  padding-right: 10px;
+  background-color: #0d080f;
+  color: #f4f3ee;
+  position: fixed;
+  text-align: center;
+  font-family: "Julius Sans One", sans-serif;
+  z-index: 100;
+  top: 10%;
+  bottom: auto;
+  right: 0px;
+  left: auto;
+  display: flex;
+  flex-direction: row-reverse;
+  transition: all 300ms ease-out;
+  border-radius: 10px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+aside img {
+  height: 1rem;
+  margin-right: 0.5rem;
+}
+aside:hover {
+  margin: 0;
+}
+aside:hover a {
+  color: #f4f3ee;
+}
+a:link,
+a:visited {
+  color: #f4f3ee;
+  text-decoration: none;
+}
+a:hover {
+  color: #8a817c;
+  transition-duration: 500ms;
+}
+/* ==============  Bread crumbs  ===========*/
+.breadcrumb ul {
+  padding-left: 6vw;
+  list-style: none;
+}
+.breadcrumb ul li {
+  display: inline;
+  font-size: 15px;
+  transition-duration: 500ms;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+.breadcrumb ul li + li:before {
+  padding: 8px;
+  color: #e0afa0;
+  content: "/\00a0";
+}
+.breadcrumb ul li a {
+  color: #e0afa0;
+  text-decoration: none;
+}
+.breadcrumb ul li a:hover {
+  color: #8a817c;
+  text-decoration: underline;
+}
+.breadcrumb ul li {
+  color: #8a817c;
+}
+/* 
+Reference:
+How to - CSS breadcrumbs. How To Make a Breadcrumb Navigation. (n.d.). Retrieved May 31, 2022, from https://www.w3schools.com/howto/howto_css_breadcrumbs.asp  */
+
+/* ==============  Header  ===========*/
+header {
+  background-color: white;
+}
+
+nav {
+  background-color: #e0afa0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  cursor: pointer;
+  z-index: 99;
+}
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: rgba(0, 0, 0, 0);
+  color: #f4f3ee;
+  padding: 16px;
+  font-size: 13px;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.menu_dropdown {
+  opacity: 0;
+  position: absolute;
+  background-color: #e0afa0;
+  min-width: 120px;
+  box-shadow: 0px 10px 30px 0px rgba(134, 131, 131, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+  top: calc(100%+2.5rem);
+  left: 0;
+}
+
+/* Links inside the dropdown */
+.menu_dropdown a {
+  color: #f4f3ee;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+}
+
+/* Change color of dropdown links on hover */
+.menu_dropdown a:hover {
+  color: #8a817c;
+  transition-duration: 1ms;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .menu_dropdown {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* toggle button */
+.toggle-btn {
+  position: absolute;
+  right: 20px;
+  width: 28px;
+  height: 31px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  top: 10px;
+  background-color: #e0afa0;
+  padding: 3px;
+  border-radius: 5px;
+  
+}
+.toggle-bar {
+  padding-top: 2px;
+  background-color: #f4f3ee;
+  width: 100%;
+  height: 1px;
+  border-radius: 10px;
+}
+
+/* Reference: 
+Dev Ed. (2019). YouTube. YouTube. Retrieved May 21, 2022, from https://www.youtube.com/watch?v=o0YiZF9XZL0&amp;t=735s. 
+Web Dev Simplified. (2021). YouTube. YouTube. Retrieved May 21, 2022, from https://www.youtube.com/watch?v=S-VeYcOCFZw&amp;t=556s.  
+How to - hoverable dropdown. How To Create a Hoverable Dropdown Menu. (n.d.). Retrieved May 21, 2022, from https://www.w3schools.com/howto/howto_css_dropdown.asp 
+
+*/
+
+/*===================LOGO====================*/
+
+.sipplus_heading {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+/* ==========================CATOGORY================== */
+.catogory {
+  height: 60vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  color: #f4f3ee;
+  margin: 0;
+  background-color: #f4f3ee;
+  text-align: center;
+}
+.catogory a {
+  text-decoration: none;
+  font-family: "Julius Sans One", sans-serif;
+  text-align: center;
+  color: #f4f3ee;
+}
+.catogory a:link {
+  text-decoration: none;
+  font-family: "Julius Sans One", sans-serif;
+  text-align: center;
+  color: #f4f3ee;
+  white-space: nowrap;
+}
+.catogory a :hover,
+.catogory a h2:hover {
+  text-decoration: none;
+  font-family: "Julius Sans One", sans-serif;
+  font-size: 2rem;
+  text-shadow: 0 1rem 5rem #3b3836;
+  text-align: center;
+  color: #f4f3ee;
+}
+
+.dry_flower {
+  background-image: url(Images/dryflower_menu.jpg);
+  background-size: cover;
+  opacity: 0.5;
+  height: 52vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 1s;
+}
+.dry_flower:hover {
+  opacity: 1;
+  transition-duration: 1s;
+}
+
+.indoor_plant {
+  background-image: url(Images/plant_menu.jpg);
+  background-size: cover;
+  opacity: 0.5;
+  height: 52vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 1s;
+}
+.indoor_plant:hover {
+  opacity: 1;
+  transition-duration: 1s;
+}
+.coffee {
+  background-image: url(Images/coffee_menu.jpg);
+  background-size: cover;
+  opacity: 0.5;
+  height: 52vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 1s;
+}
+.coffee:hover {
+  opacity: 1;
+  transition-duration: 1s;
+}
+
+/* ============== Main ===========*/
+
+.best_seller_items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.best_seller_item {
+  display: block;
+  text-align: center;
+  border: 1px dotted #243e36;
+  padding: 1vh;
+  margin: 3vw;
+  cursor: pointer;
+}
+.best_seller_item img {
+  padding-bottom: 5vh;
+  border-bottom: 1px dotted #243e36;
+  width: 20vw;
+}
+
+.video {
+  background-color: #e0afa0;
+  padding-bottom: 5vh;
+}
+
+.vlog {
+  text-align: center;
+}
+
+video {
+  border: 1px dotted #243e36;
+  padding: 1vw;
+}
+
+.social_media {
+  background-color: #f4f3ee;
+}
+.social_media_post {
+  display: flex;
+  flex-direction: row;
+  margin: 5vh;
+}
+.instagram-media {
+  height: 50vh;
+  flex-shrink: 8;
+}
+
+.expand {
+  transform: scale(0.8, 0.8);
+  transition: all 1s ease-in-out;
+  text-align: center;
+  padding-top: 5vh;
+  padding-bottom: 3vh;
+  font-family: "Montserrat", sans-serif;
+  color: #32213a;
+  font-size: 3rem;
+  line-height: 0.5rem;
+  font-weight: 200;
+}
+/* ============== Sub_page General ===========*/
+.heading {
+  height: 50vh;
+  text-align: center;
+  padding-top: 20vh;
+  margin-bottom: 8vh;
+  overflow: hidden;
+  position: relative;
+  z-index: -2;
+  border-bottom: 1px dashed #3b3836;
+  margin-top: 50px;
+}
+.heading_bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: auto;
+  z-index: -1;
+  object-position: bottom;
+}
+
+.heading h2,
+.heading h3 {
+  color: #f4f3ee;
+}
+.heading h2 {
+  font-size: 4rem;
+  line-height: 10rem;
+  font-family: "Abril Fatface", cursive;
+  text-shadow: 1px 1px 0.1rem #8a817c;
+  letter-spacing: 0.3rem;
+}
+.heading h3 {
+  font-family: "Julius Sans One", sans-serif;
+  text-shadow: 1px 1px 0.1rem #8a817c;
+  font-weight: 400;
+  line-height: 2rem;
+  font-size: 1.5rem;
+}
+.chosen {
+  background-color: #8a817c;
+  margin: 0;
+  font-weight: 400;
+  color: #f4f3ee;
+  height: 80px;
+  padding-top: 16px;
+  box-sizing: border-box;
+}
+
+.sub_page {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+/* ============== Contact ===========*/
+.contact_details {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 1rem 0;
+  background-color: #e0afa0;
+  color: #f4f3ee;
+  font-family: "Abril Fatface", cursive;
+  margin-top: -5rem;
+}
+.contact_detail {
+  padding-left: 4rem;
+  margin: 0 2rem;
+}
+.contact_detail p {
+  font-family: "Julius Sans One", sans-serif;
+}
+
+.hiring {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+.hiring div,
+.hiring img {
+  padding: 2rem;
+}
+.hiring div h2,
+.team h2 {
+  font-family: "Abril Fatface", cursive;
+  letter-spacing: 0.2rem;
+}
+.hiring div p {
+  font-family: "Montserrat", sans-serif;
+  line-height: 2rem;
+}
+/* ============== About ===========*/
+.sipplus_heading p,
+.staff p {
+  font-family: "Montserrat", sans-serif;
+  line-height: 2rem;
+  width: 30vw;
+}
+.sipplus_heading p {
+  margin-left: 10vw;
+}
+.logo {
+  border: 1px dotted #243e36;
+  width: 20vw;
+}
+.team {
+  background-image: url(Images/about_staff_bg.png);
+  background-color: #e0afa0;
+  background-size: cover;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-top: 1px dotted #243e36;
+}
+.team h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+.staff {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.staff p {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 0 5%;
+}
+
+/* ============== Login ===========*/
+
+.login {
+  background-image: url(images/headers/login_header.jpg);
+  background-size: cover;
+  background-position: top;
+  height: 100vh;
+  text-align: center;
+  padding-top: 15vh;
+  overflow: auto;
+  margin-top: 0;
+  position: relative;
+}
+
+.forms {
+  position: absolute;
+  left: 25vw;
+}
+.login h2 {
+  color: #f4f3ee;
+  font-size: 2rem;
+  font-family: "Julius Sans One", sans-serif;
+  width: 50vw;
+}
+
+.txt_field {
+  position: relative;
+  border-bottom: 0.5px solid #f4f3ee;
+  margin: 1vh 0;
+}
+input {
+  width: 100%;
+  height: 1.5rem;
+  font-size: 0.8rem;
+  font-family: "Montserrat", sans-serif;
+  border: none;
+  background: none;
+  outline: none;
+  color: #f4f3ee;
+  padding-left: 10vw;
+}
+label {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #f4f3ee;
+  margin-right: 10px;
+  position: absolute;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 50vw;
+}
+hr {
+  margin-top: 10vh;
+  width: 50vw;
+}
+
+form button {
+  font-family: "Julius Sans One", sans-serif;
+  font-size: 1rem;
+  border: none;
+  background-color: #f4f3ee;
+  color: #e0afa0;
+  height: fit-content;
+  padding: 0.5rem;
+  margin-top: 2vh;
+}
+
+/* Reference: 
+CodingNepal. (2019). YouTube. YouTube. Retrieved May 29, 2022, from https://www.youtube.com/watch?v=eeHqZeJ9Vqc&amp;t=290s. */
+
+/* ============== Products ===========*/
+
+.product_item img {
+  padding-bottom: 2vh;
+  border-bottom: 1px dotted #243e36;
+  width: 22vw;
+  box-sizing: content-box;
+  transition: 500ms ease-in-out;
+  transform: scale(0.9, 0.9);
+}
+.product_item:hover img {
+  cursor: pointer;
+  width: 22.5vw;
+  object-fit: cover;
+}
+
+.item_name,
+.item_price {
+  font-family: "Montserrat", sans-serif;
+}
+.product {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.product_item {
+  display: block;
+  text-align: center;
+  padding: 1vh;
+  margin: 3vw;
+}
+.content_wrapper_product {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+/* ============== Footer ===========*/
+footer {
+  background-color: #e0afa0;
+  display: flex;
+  flex-direction: column;
+  color: #f4f3ee;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1rem;
+  margin: 0;
+}
+
+footer button {
+  background-color: rgba(0, 0, 0, 0);
+  color: #f4f3ee;
+  padding: 2rem;
+  border: none;
+}
+
+.icons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 20vw;
+}
+
+.icons a {
+  padding: 1rem;
+}
+
+.contribute {
+  margin: 1rem;
+}
+
+/* ============== Responsive CSS ===========*/
+@media screen and (max-width: 960px) {
+  .heading h2 {
+    font-size: 3.5rem;
+    line-height: 10vh;
+    letter-spacing: 0.3rem;
+  }
+  .heading h3 {
+    font-weight: 400;
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+  }
+  .product {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .product_item {
+    display: block;
+    text-align: center;
+
+    margin: 1vw;
+  }
+  .product_item img {
+    width: 25vw;
+  }
+  .best_seller_item img {
+    width: 30vw;
+  }
+  .best_seller_items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .best_seller_item {
+    display: block;
+    padding: 1vh;
+    margin: 1rem 4rem;
+  }
+  .staff {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .staff p img {
+    width: 35vw;
+  }
+  .contact_detail {
+    padding-left: 3rem;
+    margin: 0 1rem;
+  }
+  video {
+    width: 90vw;
+  }
+
+  .social_media_post {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .logo {
+    width: 30vw;
+  }
+  aside {
+    top: 25vh;
+  }
+}
+@media screen and (max-width: 750px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+  }
+
+  .menu_dropdown {
+    margin-left: 100px;
+  }
+  .toggle {
+    position: relative;
+    display: none;
+    flex-direction: column;
+    padding: 1px;
+    transition: 0.5s;
+  }
+  .toggle-btn {
+    display: flex;
+  }
+  .toggle.live {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .catogory a :hover {
+    font-size: 1.5rem;
+    text-shadow: 0 1rem 5rem #3b3836;
+  }
+  .best_seller_items {
+    display: flex;
+    flex-direction: column;
+  }
+  .best_seller_item img {
+    width: 50vw;
+  }
+  .best_seller_item {
+    padding: 1vh;
+    margin: 10px 20vw;
+  }
+
+  .product {
+    display: flex;
+    flex-direction: column;
+  }
+  .product_item {
+    padding: 1vh;
+    margin: 10px 20vw;
+  }
+  .product_item img {
+    width: 50vw;
+  }
+  .product_item:hover img {
+    width: 51vw;
+  }
+  .contact_details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem 0;
+    padding-left: 20vw;
+  }
+  .sipplus_heading p {
+    margin-left: 10vw;
+  }
+  .logo {
+    width: 40vw;
+  }
+  .catogory {
+    height: 60vh;
+    color: #f4f3ee;
+    background-color: #f4f3ee;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+  }
+  .hiring {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .catogory a :hover {
+    font-size: 1.5em;
+    text-shadow: 0 1rem 5rem #3b3836;
+  }
+  .expand {
+    font-size: 2rem;
+    font-weight: 100;
+  }
+  .staff p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  aside {
+    width: 130px;
+    height: 20px;
+    padding-top: 0.5rem;
+    font-size: 0.8rem;
+    margin-left: -111px;
+    top: 30%;
+    left: 0;
+    transition: all 300ms ease-in-out;
+    flex-direction: row;
+    border-radius: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-left: 0.3rem;
+  }
+  aside a {
+    margin-right: 2px;
+  }
+  aside:hover {
+    margin-left: 0;
+  }
+  aside img {
+    height: 1rem;
+    margin-right: 0;
+    margin-left: 5px;
+    margin-bottom: 1rem;
+  }
+
+  .chosen {
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+  }
+  .sub_page {
+    position: relative;
+  }
+  .heading {
+    margin-top: 0;
+    height: 20vh;
+    padding-top: 4vh;
+  }
+
+  .heading h2 {
+    padding-top: 2rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  .heading h3 {
+    font-size: 0.8rem;
+  }
+
+  .contact_detail {
+    padding: 2px 10vw;
+  }
+  .contact_detail h2 {
+    font-size: 1.3rem;
+  }
+  .contact_detail p {
+    font-size: 0.8rem;
+  }
+  .sipplus_heading p {
+    font-size: 0.7rem;
+  }
+  footer {
+    display: block;
+    text-align: center;
+  }
+  .icons {
+    width: 50vw;
+    margin-left: 25vw;
+  }
+  label {
+    font-weight: 100;
+  }
+  .breadcrumb {
+    display: none;
+  }
+}
